@@ -27,6 +27,8 @@ a cada uno de los botones
 
 function anadir(){
 
+    
+
 }
 
 ///////////////////
