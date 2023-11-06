@@ -1,0 +1,58 @@
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+.card{
+    background-color: #ffe4c4;
+    position: relative;
+    max-width: 40ch;
+    margin: 0 auto;
+    border: 2px solid brown;
+}
+.card-header{
+   position: absolute;
+	top: -1ch;
+	left: 5ch;
+	text-align:center;
+	padding: 0.25rem;
+	background-color: hsl(0, 59%, 71%);
+	color: white;
+	width: 30ch;
+	border: 2px solid brown;
+
+}
+.card p{
+    padding-top: 2rem;
+	padding-inline: 1rem;
+	padding-bottom: 1rem;
+}
+.card-screw{
+    background-color: red;
+}
+.card p{
+	padding-top: 2rem;
+	
+}
+.card-screw{
+	width: 5px;
+	height: 5px;
+	background-color: brown;
+	position: absolute;
+	border-radius: 50%;
+}
+.card-screw:nth-child(1){
+    top: 1rem;
+    left: 1rem;
+}
+.card-screw:nth-child(2){
+    top: 1rem;
+    right: 1rem;
+}
+.card-screw:nth-child(3){
+    bottom: 1rem;
+    left: 1rem;
+}
+.card-screw:nth-child(4){
+    bottom:1rem ;
+    right: 1rem;
+}

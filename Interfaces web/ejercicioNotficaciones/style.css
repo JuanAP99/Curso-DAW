@@ -1,0 +1,39 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.2.0/css/fork-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  background-color: #5fdfc4;
+  color: #444;
+  font-family: roboto, arial, sans-serif;
+}
+
+.container {
+  width: 250px;
+  background-color: white;
+  padding: 0.2rem 0.5rem;
+  margin: 5rem auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.count {
+  padding: 0.5rem;
+  background-color: #d6f8e6;
+  color: darkorange;
+  border-radius: 5px;
+}
+.texto{
+    flex-grow: 1;
+}
+i{
+  margin: 0px 5px;
+  flex-grow: 0;
+}
+.contador{
+    background-color: rgb(212, 211, 211);
+    border-radius: 5px;
+    padding-inline: 0.75rem;
+    padding-block: 0.25rem;
+    color: rgb(255, 101, 44);
+}

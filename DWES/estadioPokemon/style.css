@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P:regular);
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+  font-family: Roboto,Arial, Helvetica, sans-serif;
+  /*background-image: url(https://i.blogs.es/3bb703/leyendas-pokemon-arceus-fondo/1366_2000.jpeg);*/
+  background-size: contain; /* Ajusta la imagen al tamaño de la ventana manteniendo su relación de aspecto */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  background-attachment: fixed; 
+  margin: 0 auto;
+  max-width: 200ch;
+  
+}
+
+h1{
+  text-align: center;
+  background-color: #386381;
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+img{
+  max-width: 300px;
+  max-height: 150px;
+}
+
+.tabla-1 {
+  float: left;
+  width: 50%;
+  height: 100%;
+  
+}
+.tabla-2{
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+
+.tabla-1 img,
+.tabla-2 img {
+    width: 100%; /* Ancho al 100% de la celda */
+    height: 100%; /* Ajustar altura automáticamente */
+}
+th{
+  background-color: #386381;
+  font-size: 1.5rem;
+
+}
+div{
+  text-align: center;
+  background-color: #386381;
+  padding: 2rem;
+  font-size: 4rem;
+  font-family: "Press Start 2P",Arial, Helvetica, sans-serif;
+ /* background-image: url(https://st2.depositphotos.com/3213441/12022/v/950/depositphotos_120226584-stock-illustration-pokemon-go-pokeball-seamless-texture.jpg);*/
+  color: gold;
+  font-weight: bold;
+  text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+
+

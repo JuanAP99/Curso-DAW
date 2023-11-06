@@ -1,0 +1,22 @@
+*::before,*::after{
+    box-sizing: border-box;
+  }
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body{
+    max-width:640px ;
+    display: flex;
+}
+
+.texto_ipsum{
+    background-color: aqua;
+    font-family: Montserrtat,Arial, Helvetica, sans-serif;
+    padding: 0.5rem;
+    
+}
+@media screen and (min-width:1281px) {
+    .texto_ipsum{
+        max-width: 1920px;
+    }
+}

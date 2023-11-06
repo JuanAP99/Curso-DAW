@@ -1,0 +1,32 @@
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.a{
+    background-color: rgb(0, 187, 84);
+}
+.b{
+    background-color: orange;
+}
+.c{
+    background-color: yellowgreen;
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+.d{
+    background-color: blueviolet;
+}
+.e{
+    background-color: rgb(216, 0, 245);
+}
+.f{
+    background-color: rgb(0, 81, 255);
+}

@@ -1,0 +1,34 @@
+*,::before,*::after{
+    box-sizing: border-box;
+  }
+  
+p{
+    color: #336;
+}
+.destacado{
+    background-color: bisque;
+}
+#resultado{
+    margin: 2rem;
+    border: 1px;
+    background-color: red;
+}
+header  p {
+    font-size: 1.5rem;
+}
+p + p {
+    border-left: 6px solid #336;
+    padding-left: 2px;
+}
+.destacado > a{
+    color: red;
+}
+#resultado p {
+    background-color: #eee;
+}
+p:hover{
+    font-weight: 900;
+}
+#resultado p:last-child {
+    font-size: 0.75rem;
+}

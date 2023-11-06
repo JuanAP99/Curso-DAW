@@ -1,0 +1,51 @@
+*,::before,::after{
+    box-sizing: border-box;
+}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat",Arial, Helvetica, sans-serif;
+}
+.container{
+    max-width: 60ch;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(197, 197, 197);
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px black;
+}
+.mensual{
+    font-size: xx-small;
+}
+.blanco{
+    background-color: whitesmoke;
+    padding: 1rem;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    
+}
+.morado{
+    background-color: rgb(201, 0, 110);
+    padding: 2rem;
+}
+.container div{
+    margin: 0.5rem;
+}
+.plan{
+    font-weight: bold;
+    
+}
+.dinero{
+    font-weight: bold;
+    font-size: x-large;
+    padding: 1rem;
+}

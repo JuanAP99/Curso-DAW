@@ -1,0 +1,256 @@
+Empezar con selecion.php; ahi lo selecciono, se lo mando a duelo.php, en duelo selecciono aleatoriamente los
+de la maquina. y pinto el tablero, tambien tengo que pintar un contenedor o algo con los stats e imagen, en el tablero solo 
+imagen 
+
+los select tengo que hacerlo x4 para traerlo todo de una 
+
+Separar funciones de tratado de datos y las de imprimir
+
+
+
+$pokemons = array(
+    '1' =>  array(
+        'nombre' => 'snorlax',
+        'tipo' => 'normal',
+        'fuerza' => 110,
+        'ps' => 160,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png"
+    ),
+    '2' =>  array(
+        'nombre' => 'nidoking',
+        'tipo' => 'poison',
+        'fuerza' => 85,
+        'ps' => 81,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png"
+    ),
+    '3' =>  array(
+        'nombre' => 'magmortar',
+        'tipo' => 'fire',
+        'fuerza' => 125,
+        'ps' => 75,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/467.png" 
+    ),
+    '4' =>  array(
+        'nombre' => 'electivire',
+        'tipo' => 'electic',
+        'fuerza' => 123,
+        'ps' => 75,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/466.png" 
+    ),
+    '5' =>  array(
+        'nombre' => 'pidgeot',
+        'tipo' => 'flying',
+        'fuerza' => 80,
+        'ps' => 83,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png"
+    ),
+    '6' =>  array(
+        'nombre' => 'blastoise',
+        'tipo' => 'water',
+        'fuerza' => 83,
+        'ps' => 79,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
+    ),
+    '7' =>  array(
+        'nombre' => 'charizard',
+        'tipo' => 'fire',
+        'fuerza' => 109,
+        'ps' => 78,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+    ),
+    '8' =>  array(
+        'nombre' => 'gengar',
+        'tipo' => 'ghost',
+        'fuerza' => 60,
+        'ps' => 130,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" 
+    ),
+    '9' =>  array(
+        'nombre' => 'dragonite',
+        'tipo' => 'dragon',
+        'fuerza' => 100,
+        'ps' => 91,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png"
+    ),
+    '10' =>  array(
+        'nombre' => 'sceptile',
+        'tipo' => 'grass',
+        'fuerza' => 105,
+        'ps' => 70,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png" 
+    ),
+    '11' =>  array(
+        'nombre' => 'blaziken',
+        'tipo' => 'fire',
+        'fuerza' => 120,
+        'ps' => 80,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png"
+    ),
+    '12' =>  array(
+        'nombre' => 'swampert',
+        'tipo' => 'water',
+        'fuerza' => 110,
+        'ps' => 100,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/260.png" 
+    ),
+    '13' =>  array(
+        'nombre' => 'typhlosion',
+        'tipo' => 'fire',
+        'fuerza' => 109,
+        'ps' => 78,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png"
+    ),
+    '14' =>  array(
+        'nombre' => 'crobat',
+        'tipo' => 'poison',
+        'fuerza' => 90,
+        'ps' => 85,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/169.png"
+    ),
+    '15' =>  array(
+        'nombre' => 'alakazam',
+        'tipo' => 'psychic',
+        'fuerza' => 95,
+        'ps' => 55,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png" 
+    ),
+    '16' =>  array(
+        'nombre' => 'meganium',
+        'tipo' => 'grass',
+        'fuerza' => 83,
+        'ps' => 80,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png" 
+    ),
+    '17' =>  array(
+        'nombre' => 'feraligatr',
+        'tipo' => 'water',
+        'fuerza' => 100,
+        'ps' => 105,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png"
+    ),
+    '18' =>  array(
+        'nombre' => 'empoleon',
+        'tipo' => 'water',
+        'fuerza' => 111,
+        'ps' => 84,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/395.png"
+    ),
+    '19' =>  array(
+        'nombre' => 'infernape',
+        'tipo' => 'fire',
+        'fuerza' => 104,
+        'ps' => 76,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/392.png"
+    ),
+    '20' =>  array(
+        'nombre' => 'torterra',
+        'tipo' => 'grass',
+        'fuerza' => 109,
+        'ps' => 95,
+        'sprite' => "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/389.png"
+    )
+
+
+
+
+    ----------------------
+
+
+            $nombrePokemon = $linea[0];
+            $output .= '<input type="checkbox" name="pokemon[]'.($contador+1).'" value="'.$nombrePokemon.'">';
+            $contador++;
+
+
+            ------------------------
+
+
+            function elegirEquipo(){
+
+$csvFile = 'pokemon.csv';
+
+$fichero = fopen($csvFile, 'r');
+
+    if($fichero !==false){
+
+        /* Leemos el fichero y fgetcsv nos devuelve un array indexado de los campos del csv */
+
+           
+       $output = '';
+       $output .= '<form action="" method="post">';
+
+        while(($linea = fgetcsv($fichero,5000,",")) !== false){
+            
+            foreach($linea as $clave => $pokemon){
+           
+
+                $output .= '<input type="checkbox" id name="pokemon '.$clave.'" value="'.$pokemon[0].'" id="'.$clave.'">';
+                $output .= '<label for="'.$clave.'"></label>';    
+
+            }
+        }
+
+        
+       
+
+    }
+    
+    fclose($fichero);
+    $output .= '<input type="submit" name="Enviar" value="Enviar">';
+    $output .= '</form>';
+
+    return $output;
+}
+
+
+
+
+-------------------------------------
+
+
+  for ($i=1;$i<=4 ; $i++){
+
+                $pokemonID = 'pokemon_id:'.$i;
+
+                if ($pokemonInfo['nombre'] == $_POST[$pokemonID]) {
+
+                    if (isset($pokemonInfo[$key])){
+
+                    $pokemonElegido = $pokemonInfo[$key];
+
+                    array_push($pokemonElegidos, $pokemonElegido); 
+
+                    }
+                }
+
+            }
+---------------------------------
+
+do{
+                    $posicion = rand(1,36);
+                }while(in_array($posicion, $arrayPosiciones));
+                $arrayPosiciones[] = $posicion; 
+                $totalEquipos[$key]['posicion'] = $posicion;
+
+----------------------------------------------------------
+
+
+  function eligePelea($equipo1,$equipo2){
+        
+        $output = '';
+        $totalEquipos = [];
+        array_push($totalEquipos,$equipo1);
+        array_push($totalEquipos,$equipo2);
+
+       $output .= '<form action="ganandores.php" method="post">';
+       for($i = 0; $i < 2;$i++){
+        foreach($totalEquipos[$i] as $key => $pokemonInfo){
+            $pokemon = $totalEquipos[$i][$key];
+            $output .= 'select name="equipo'.($i+$key).'[]"';
+            $output .= '<option value="'.json_encode($pokemon).'">'.$pokemon['nombre'].'</option';
+            $output .= '</select>'; 
+        }
+       }
+        $output .= '</form>';
+        return $output;
+
+    }

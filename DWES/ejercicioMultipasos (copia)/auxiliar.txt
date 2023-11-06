@@ -1,0 +1,32 @@
+if($_SESSION['pasoActual'] == 1){
+    $get_markup = get_markup($formulario, 1);
+}else if($_SESSION['pasoActual'] == 2){
+    $get_markup = get_markup($formulario, 2);
+}else if($_SESSION['pasoActual'] == 3){
+    $kgLevantados = $_POST['numBox1'];
+    $repeticiones = $_POST['numBox2'];
+    $get_markup = get_mejora($kgLevantados,$repeticiones);
+}
+if(isset($_POST['siguiente'])){
+    $_SESSION['pasoActual']++;
+    $get_markup = get_markup($formulario, $_SESSION['pasoActual']);
+}else if(isset($_POST['anterior'])){
+    $_SESSION['pasoActual']--;
+    $get_markup = get_markup($formulario, $_SESSION['pasoActual']);
+}
+
+
+----------------------------
+
+coger el valor del campo y darselo al value 
+
+ $valor = isset($_SESSION['formulario'][$campo['name']]) ? $_SESSION['formulario'][$campo['name']] : '';
+
+
+
+ --------------------------------------------
+
+
+ paso 3 : darle dinamismo 
+
+darle opciones segun lo elegido en lo segundo .
