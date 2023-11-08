@@ -1,0 +1,38 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Antonio:100,200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+.cont-card {
+    background-image: url(container07.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 1rem;
+    
+}
+
+p{
+    font-family: Roboto,Arial, Helvetica, sans-serif;
+}
+
+.titulo{
+    color: rgb(36, 206, 121);
+}
+h1{
+    color:  rgb(36, 206, 121);
+}
+span{
+    color:whitesmoke
+}
+button{
+    width: 250px;
+}
