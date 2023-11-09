@@ -19,6 +19,9 @@ Mirar si los post no estan vacios y estan establecidos; que no te redirigo a log
 
 Una vez establecidos tengo que mirar que el usuario y la contraseña son las que estan en el archivo csv a
 
+notas:
+index.php tiene que ver si la sesion  de nombre de usuario está establecida , y serviria de selección (para mostrar toda la lista de producto que puedes comprar.)
+comprobar en login.php si está establecido el post de los input y comparar la session con el post y si es correcto mandar a index.php
 */
 
 
@@ -38,7 +41,7 @@ while ($data = fgetcsv ($fp, 1000, ",")) {
 
 fclose ($fp);
 
-if(!isset($_POST['nameUser']) && empty($_POST['nameUser']) && !isset($_POST['passUser']) && empty($_POST['passUser'])){
+if(!isset($_SESSION['nameUser']) && empty($_SESSION['nameUser']) && !isset($_SESSION['passUser']) && empty($_SESSION['passUser'])){
 
     header("location: login.php");
 

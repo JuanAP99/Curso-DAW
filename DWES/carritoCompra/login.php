@@ -7,6 +7,26 @@
 </head>
 <body>
     
+    <?php
+    
+        if(!isset($_POST['btnEnviar'])){
+
+         echo  '<form action="index.php" method="post">';
+         echo   '<label for="nameUser">Nombre de usuario</label><br>';
+         echo   '<input type="text" name="nameUser" id="nameUser"><br>';
+         echo  '<label for="nameUser">Contraseña</label><br>';
+         echo   '<input type="password" name="passUser" id="passUser"><br>';
+         echo   '<input type="submit" name="btnEnviar" value="Login">';
+         echo '</form>';
+            
+
+        }
+
+    
+    ?>
+
+
+
     <form action="index.php" method="post">
         
         <label for="nameUser">Nombre de usuario</label><br>
