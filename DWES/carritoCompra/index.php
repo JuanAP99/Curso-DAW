@@ -17,7 +17,7 @@ Basicamente el punto 1 es :
 
 Mirar si los post no estan vacios y estan establecidos; que no te redirigo a login.php
 
-Una vez establecidos tengo que mirar que el usuario y la contraseña son las que estan en el archivo csv 
+Una vez establecidos tengo que mirar que el usuario y la contraseña son las que estan en el archivo csv a
 
 */
 
