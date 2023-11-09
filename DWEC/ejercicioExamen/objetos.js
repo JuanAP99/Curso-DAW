@@ -25,6 +25,11 @@ class Almacen{
 
             if(idProducto != productoEnStock.idProducto){
 
+                this.stock.push()
+
+
+            }
+
         }
     }
     salidaStock(idProducto, unidades){
