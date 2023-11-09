@@ -13,20 +13,22 @@ carro. Cuando se pulsa añadir al carrito, ese número de unidades es añadido. 
 compra.En la página del carro de la compra se puede reducir o ampliar directamente el número de unidades de un producto incluidas en él. Si el número de unidades de un 
 producto es 0, el producto debe desaparecer del carrito.
 
-
-
-
 Basicamente el punto 1 es :
 
 Mirar si los post no estan vacios y estan establecidos; que no te redirigo a login.php
 
 Una vez establecidos tengo que mirar que el usuario y la contraseña son las que estan en el archivo csv 
 
-
-
 */
 
+
+require_once("functions.php");
+require_once("vars.php");
+
+
 $fp = fopen ("users.csv","r");
+
+/*  Meter en un array seria mas correcto no? */
 
 while ($data = fgetcsv ($fp, 1000, ",")) {
     $num = count ($data);
@@ -46,12 +48,15 @@ if(!isset($_POST['nameUser']) && empty($_POST['nameUser']) && !isset($_POST['pas
 
         $_SESSION['nameUser'] = $_POST['nameUser'];
         $_SESSION['passUser'] = $_POST['passUser'];
-
+        header("location: seleccion.php");
     }else {
         header("location: login.php");
     }
-
 }
+
+
+
+
 
 
 ?>
