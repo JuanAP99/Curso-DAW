@@ -54,7 +54,7 @@ if(!isset($_POST['nameUser']) && empty($_POST['nameUser']) && !isset($_POST['pas
     }
 }
 
-
+/* Si tengo que poner el array, puedo hacer tambien despúes meter todo el array de usuarios que tengo en el fichero csv */
 
 
 

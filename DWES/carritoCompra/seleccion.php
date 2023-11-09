@@ -12,7 +12,6 @@
     require_once("vars.php");
 
     $seleccion_markup = seleccionProductos_markup($productos);
-    
     print $seleccion_markup;
 
 
