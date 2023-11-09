@@ -24,37 +24,24 @@ index.php tiene que ver si la sesion  de nombre de usuario está establecida , y
 comprobar en login.php si está establecido el post de los input y comparar la session con el post y si es correcto mandar a index.php
 */
 
+session_start();
+
 
 require_once("functions.php");
 require_once("vars.php");
 
 
-$fp = fopen ("users.csv","r");
 
-/*  Meter en un array seria mas correcto no? */
 
-while ($data = fgetcsv ($fp, 1000, ",")) {
-    $num = count ($data);
-    $nombreUsuario = $data[0];
-    $pass = $data[1];
-    }
+if(isset($_SESSION['nameUser']) && !empty($_SESSION['nameUser']) && isset($_SESSION['passUser']) && !empty($_SESSION['passUser'])){
 
-fclose ($fp);
 
-if(!isset($_SESSION['nameUser']) && empty($_SESSION['nameUser']) && !isset($_SESSION['passUser']) && empty($_SESSION['passUser'])){
+
+
+}else{
 
     header("location: login.php");
 
-}else{
-    
-    if($_POST['nameUser'] == $nombreUsuario && $_POST['passUser'] == $pass){
-
-        $_SESSION['nameUser'] = $_POST['nameUser'];
-        $_SESSION['passUser'] = $_POST['passUser'];
-        header("location: seleccion.php");
-    }else {
-        header("location: login.php");
-    }
 }
 
 /* Si tengo que poner el array, puedo hacer tambien despúes meter todo el array de usuarios que tengo en el fichero csv */
