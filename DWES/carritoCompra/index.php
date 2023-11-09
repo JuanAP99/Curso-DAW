@@ -35,7 +35,7 @@ require_once("vars.php");
 
 if(isset($_SESSION['nameUser']) && !empty($_SESSION['nameUser']) && isset($_SESSION['passUser']) && !empty($_SESSION['passUser'])){
 
-
+    print $_SESSION['nameUser'];
 
 
 }else{

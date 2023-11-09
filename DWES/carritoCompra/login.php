@@ -33,6 +33,7 @@ fclose ($fp);
                 $_SESSION['passUser'] = $_POST['passUser'];
 
                 print  $_SESSION['nameUser'] ;
+                header("location: index.php");
                
 
             }else{
