@@ -1,0 +1,45 @@
+<div class="box-botones">
+                    <a>boton 1</a>
+                    <a>boton 2</a>
+                </div>
+
+                por si le quiero añadir algun boton al hero
+
+
+
+
+
+
+
+ <section>
+        <div class="conocimientos">
+            <div class="titulos">Conocimientos</div>
+            <table >
+                <tbody>
+                  <tr>
+                    <td>Lenguajes para desarrollo</td>
+                    <td><img src="img/java.jpg"></td>
+                    <td><img src="img/php.png"></td>
+                    <td><img src="img/js.png"></td>
+                    <td><img src="img/html.png"></td>
+                    <td><img src="img/css.jpg"></td>
+                  </tr>
+                  <tr>
+                    <td>Frameworks y Librerías</td>
+                    <td><img src="img/react.png"></td>
+                    <td><img src="img/angular.png"></td>
+                    <td><img src="img/nodejs.png"></td>
+                    <td><img src="img/Laravel.jpg"></td>
+                    <td><img src="img/jquery.png"></td>
+                  </tr>
+                  <tr>
+                    <td>Software y Herramientas</td>
+                    <td><img src="img/vsc.jpg"></td>
+                    <td><img src="img/eclipse.jpg"></td>
+                    <td><img src="img/post-716768416.jpg"> </td>
+                    <td><img src="img/gitTabla.png"></td>
+                    <td><img src="img/photoshop.jpg"></td>
+                  </tr>
+                </tbody>
+            </table>
+        </section>     

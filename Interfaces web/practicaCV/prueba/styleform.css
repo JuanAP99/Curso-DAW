@@ -1,0 +1,97 @@
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+
+.sectionForm{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont-formulario{
+    position: relative;
+    height: 450px;
+    width: 400px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*Quitar si va mal */
+}
+.formulario{
+    margin-top: 2rem;
+    height: 400px;
+}
+.cont-input{
+    position: relative;
+    margin: 30px 0;
+    width: 300px;
+    border-bottom: 2px solid #fff;
+}
+.cont-input label{
+    position:absolute;
+    top: 50%;
+    left:5px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 1rem;
+    pointer-events:none;
+    transition: 5s;
+    font-family: bold;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.cont-input input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    font-size:1rem;
+    padding: - 35px 0 5px;
+    font-weight: bold;
+}
+.cont-input i{
+    position: absolute;
+    color: #000000;
+    font-size: 1.6rem;
+    top:19 px;
+    right: 8px;
+}
+.cont-input i:hover{
+     transform: scale(1.2);
+}
+button{
+    width: 100%;
+    height: 45px;
+    border-radius:40px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: .4s;
+    background-image: linear-gradient(to bottom right, #001f3f, #4218B8);
+}
+button:hover{
+    opacity: .5;
+}
+.titulos{
+    
+    background-color: var(--azul-principal);
+    width: 100%;
+    height: 100px;
+    font-size: x-large;
+    color: whitesmoke;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, #001f3f, #4218B8);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;  
+}
