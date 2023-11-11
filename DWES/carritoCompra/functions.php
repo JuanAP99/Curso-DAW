@@ -8,8 +8,9 @@ function seleccionProductos_markup($productos){
 
     foreach($productos as $id => $campo){
         $output .= '<p>Producto nº'.$id.': '.$campo['nombre'].'</p>';
+        $output .= '<p>Precio del producto: '.$campo['precio'].'€</p>';
         $output .= '<label>Cantidad deseada: </label><br>';
-        $output .= '<input type="number" name="cantidad_'.$campo['nombre'].'_'.$id.'"  >';
+        $output .= '<input type="number" name="producto[]" >';
         
     }
     $output .= '<br><input type="submit" name="btnSeleccion" value="Ir al carrito">';

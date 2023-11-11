@@ -33,20 +33,28 @@ require_once("vars.php");
 
 
 
-if(isset($_SESSION['nameUser']) && !empty($_SESSION['nameUser']) && isset($_SESSION['passUser']) && !empty($_SESSION['passUser'])){
-
-    print $_SESSION['nameUser'];
-
-
-}else{
+if(!isset($_SESSION['nameUser'])){
 
     header("location: login.php");
+    exit();
 
 }
+echo '<p>Entra aqui</p>';
+
+$dame_productos = seleccionProductos_markup($productos);
+
+if($_SESSION['nameUser'] != 'juanap99'){
+
+    header("location: login.php");
+    exit();
+}else{
+    $dame_productos = seleccionProductos_markup($productos);
+}
+
 
 /* Si tengo que poner el array, puedo hacer tambien despúes meter todo el array de usuarios que tengo en el fichero csv */
 
-
+require_once("template.php");
 
 
 ?>

@@ -8,11 +8,14 @@
 <body>
     
     <?php
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-    
+
+session_start();
+
+$_SESSION['nameUser'] = '';
+$_SESSION['passUser'] = '';
 
 $fp = fopen ("users.csv","r");
 while ($data = fgetcsv ($fp, 1000, ",")) {
@@ -27,15 +30,10 @@ fclose ($fp);
             
 
             if($_POST['nameUser'] == $nombreUsuario && $_POST['passUser'] == $pass) {
-
-                echo 'entro aqui';
                 $_SESSION['nameUser'] = $_POST['nameUser'];
-                $_SESSION['passUser'] = $_POST['passUser'];
-
-                print  $_SESSION['nameUser'] ;
+                $_SESSION['passUser'] = $_POST['passUser'];                
                 header("location: index.php");
-               
-
+                exit();
             }else{
                 echo '<h4>Se ha producido un error de credenciales, intenta logearte de nuevo</h4>';
                 echo  '<form action="login.php" method="post">';
