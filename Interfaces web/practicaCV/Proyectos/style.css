@@ -78,12 +78,12 @@
 .proyecto{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 600px;
-    margin: 2rem;
     background-color: rgb(255, 248, 238);
+    margin: 1rem;
+    padding: 1rem;
 }
 .proyecto img{
     width: 550px;
@@ -94,8 +94,8 @@
     padding: 1rem;
 }
 .cont-img1{
-   background-color: #000000;
-}
+   border: 5px solid red;
+   width: 100%;
 
  footer{
     font-family: var(--letra-contenido),Arial, Helvetica, sans-serif;
