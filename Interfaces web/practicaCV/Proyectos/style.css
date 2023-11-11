@@ -87,9 +87,8 @@
 }
 .cont-proyectos{
     display: flex;
-    
     flex-wrap: wrap;
-   
+   gap:2;
 }
 
 .logo-footer{
@@ -128,6 +127,18 @@
 .social-icon:nth-child(4){
     background-image: url(img/github.png);
 }
+
+.proyecto{
+    width: 400px;
+    height: 400px;
+}
+
+
+
+
+
+
+
 .titulos{
     background-color: var(--azul-principal);
     width: 100%;
