@@ -86,8 +86,10 @@
     padding: 1rem;
 }
 .proyecto img{
-    width: 550px;
-    
+    width: 550px; 
+}
+.cont-img1{
+    display: block;
 }
 .txt-proyecto{
     margin-top: 2rem;
@@ -301,4 +303,5 @@
     
 }
 
+}
 }

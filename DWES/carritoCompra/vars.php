@@ -5,7 +5,7 @@ $productos = [
     '1' => [
         'nombre' => 'Bebida energética',
         'precio' => 1.5 ,
-         'cantidad' => 0
+        'cantidad' => 0
     ],
     '2' => [
         'nombre' => 'Coca cola',

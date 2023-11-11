@@ -24,7 +24,7 @@ if($_SESSION['nameUser'] != 'juanap99'){
 
         if($productos[$clave]['cantidad'] != 0){
 
-            $_SESSION['carrito']= $productos[$clave];
+            $_SESSION['carrito'] = $productos[$clave];
 
         }
     }
