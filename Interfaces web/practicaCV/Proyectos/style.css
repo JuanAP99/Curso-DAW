@@ -18,6 +18,9 @@
     --letra-contenido: "Montserrat";
     --color-fondo-section: rgb(255, 248, 238);;
 }
+.contenedor{
+    max-width: 100%;
+}
 .nav-bar{
     display:flex;
     justify-content: space-between;
@@ -81,6 +84,12 @@
     background-color: var(--azul-principal);
     color: var(--color-txt-nav);
     padding: 1rem;
+}
+.cont-proyectos{
+    display: flex;
+    
+    flex-wrap: wrap;
+   
 }
 
 .logo-footer{
@@ -262,6 +271,9 @@
     }
     .cont-footer{
         width: 100vw;
+    }
+    .cont-footer img{
+        width: 150px;
     }
     
 }
