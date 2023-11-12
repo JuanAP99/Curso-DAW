@@ -22,7 +22,10 @@ function carrito_markup(){
     $output = '';
     
     $output .= '<form action="carrito.php">';
-    $output .= '<>';
+
+
+    
+    $output .= '<input type="submit" name>';
 
 
     $output .= '</form>';
