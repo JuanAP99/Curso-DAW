@@ -37,14 +37,10 @@ if(!isset($_SESSION['nameUser'])){
 
     header("location: login.php");
     exit();
-
 }
-echo '<p>Entra aqui</p>';
-
 $dame_productos = seleccionProductos_markup($productos);
 
 if($_SESSION['nameUser'] != 'juanap99'){
-
     header("location: login.php");
     exit();
 }else{

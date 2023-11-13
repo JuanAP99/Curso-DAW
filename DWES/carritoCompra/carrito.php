@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,6 +16,7 @@ require_once("vars.php");
 
 if($_SESSION['nameUser'] != 'juanap99'){
     header("location:login.php");
+    exit();
 } 
      
 if(isset($_POST['producto'])){
@@ -43,23 +45,22 @@ if(isset($_POST['producto'])){
         foreach($_SESSION['carrito'] as $key => $producto){
             if(isset($_POST['mas'][$key])){
                 ++$_SESSION['carrito'][$key]['cantidad'];
-                print_r('Vaslor al sumar: '. $_SESSION['carrito'][$key]['cantidad']);
             }else if(isset($_POST['menos'][$key])){
                 --$_SESSION['carrito'][$key]['cantidad'];
-                print_r('Valor al retsar: '. $producto['cantidad']);
             }
-            
             if($_SESSION['carrito'][$key]['cantidad'] == 0){
                 unset($_SESSION['carrito'][$key]);
             }
     
         }
     }
+    $total = 0;
 
+    foreach($_SESSION['carrito'] as $clave => $valor){
 
-
-
-
+        $total += ($valor['cantidad'] * $valor['precio']);
+        
+    }
 
     echo '<form action="carrito.php" method="post">';
     
@@ -70,23 +71,16 @@ if(isset($_POST['producto'])){
         echo '<input type="submit" value="-" name="menos['.$clave.']">';
         echo '<div>Cantidad: '.$valor['cantidad'].'</div>';
         echo '<input type="submit" value="+" name="mas['.$clave.']"><br>';
+        
     }
 
-    echo '</form>';
+    echo 'El total de la multa es : '.$total.'€';
+
+   /* echo '</form>';
     echo '<pre>';
     print_r($_SESSION['carrito']);
     
-    echo '</pre>';
-
-
-
-
-    
-  
-
-
-
-
+    echo '</pre>'; */
 
 ?>
 </body>
