@@ -40,8 +40,6 @@ if(isset($_POST['producto'])){
     /* En carrito ya tengo todo lo que he seleccionado arteriormente */
 
     if(isset($_POST['mas']) || isset($_POST['menos'])){
-
-        $claveAux = 0;
         foreach($_SESSION['carrito'] as $key => $producto){
             if(isset($_POST['mas'][$key])){
                 ++$_SESSION['carrito'][$key]['cantidad'];
@@ -51,23 +49,17 @@ if(isset($_POST['producto'])){
             if($_SESSION['carrito'][$key]['cantidad'] == 0){
                 unset($_SESSION['carrito'][$key]);
             }
-    
         }
     }
     $total = 0;
-
     foreach($_SESSION['carrito'] as $clave => $valor){
-
         $total += ($valor['cantidad'] * $valor['precio']);
-        
     }
-
     echo '<form action="carrito.php" method="post">';
     
     foreach($_SESSION['carrito'] as $clave => $valor){
 
         echo '<div>Producto: '.$valor['nombre'].'</div>';
-        echo '<input type="hidden" name="entrado" value="entrado">';
         echo '<input type="submit" value="-" name="menos['.$clave.']">';
         echo '<div>Cantidad: '.$valor['cantidad'].'</div>';
         echo '<input type="submit" value="+" name="mas['.$clave.']"><br>';
