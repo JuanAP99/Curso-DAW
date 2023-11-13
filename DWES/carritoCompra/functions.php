@@ -18,17 +18,6 @@ function seleccionProductos_markup($productos){
     return $output;
 }
 
-function carrito_markup(){
-    $output = '';
-    
-    $output .= '<form action="carrito.php">';
 
-
-    
-    $output .= '<input type="submit" name>';
-
-
-    $output .= '</form>';
-}
 
 ?>
