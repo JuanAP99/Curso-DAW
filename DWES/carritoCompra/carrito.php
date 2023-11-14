@@ -13,6 +13,10 @@
 session_start();
 
 require_once("vars.php");
+if(isset($_POST['volver'])){
+    header("location:index.php");
+    exit();
+}
 
 if($_SESSION['nameUser'] != 'juanap99'){
     header("location:login.php");
@@ -58,15 +62,14 @@ if(isset($_POST['producto'])){
     echo '<form action="carrito.php" method="post">';
     
     foreach($_SESSION['carrito'] as $clave => $valor){
-
         echo '<div>Producto: '.$valor['nombre'].'</div>';
         echo '<input type="submit" value="-" name="menos['.$clave.']">';
         echo '<div>Cantidad: '.$valor['cantidad'].'</div>';
         echo '<input type="submit" value="+" name="mas['.$clave.']"><br>';
-        
     }
 
     echo 'El total de la multa es : '.$total.'€';
+    echo '<br><input type="submit" name="volver" value="Volver hacia atrás">'; 
 
    /* echo '</form>';
     echo '<pre>';
