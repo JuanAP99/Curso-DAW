@@ -1,6 +1,6 @@
 <?php 
 $videojuegos = array(
-	array("nombre" => "Animal Crossing: New Horizons", "fecha" => "2020", "creador" => "nintendo"),
+	array("nombre" => "Animal Crossing: New Horizons", "creador" => "Nintendo", "anio" => 2020),
 	array("nombre" => "Assassin's Creed", "fecha" => "2007-11-13", "creador" => "Patrice Désilets"),
 	array("nombre" => "BioShock", "fecha" => "2007-08-21", "creador" => "Ken Levine"),
 	array("nombre" => "Call of Duty", "fecha" => "2003-10-29", "creador" => "Infinity Ward"),
