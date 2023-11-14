@@ -6,7 +6,7 @@
 //////////////////
 
 const ocultarFormularios = () =>{
-    document.querySelectorAll("form").forEach(
+    document.querySelectorAll(".form").forEach(
         formulario => formulario.classList.add("oculto")
     );
 }
