@@ -1,36 +1,44 @@
 "use strict";
 
 class Almacen{
-    constructor(catalogo,stock){
-        this.catalogo = catalogo;
-        this.stock = stock;
+    constructor(){
+        this.catalogo = [];
+        this.stock = [];
     }
     altaProducto(oProducto){
 
-        let esta = false;
-        
-        for(this.catalogo of producto){
+        let m = '';
 
-            if( producto == oProducto.nombre){
-                esta= true;
-            }else{
-                esta = false;
+        this.catalogo.forEach(function(producto){
+
+            if(producto.id === oProducto.id){
+                return false;
             }
-        }
-        return esta;
+        });
+
+        this.catalago.push(oProducto);
+       
+        return true;
     }
     entradaStock(idProducto, unidades){
 
-        for(this.stock of productoEnStock){
-
-            if(idProducto != productoEnStock.idProducto){
-
-                this.stock.push()
-
-
+        let exsiste = false;
+        for(const producto of this.stock){
+            if (producto.idProducto === idProducto){
+                    exsiste = true;
+                    
+                    break;
             }
-
         }
+        if(exsiste){
+            oStock = new Stock (idProducto, unidades);
+            almacen.stock.push(oStock);
+            return `Stock actualizado con éxito.`;
+        }else{
+            return "No se encuentra el id del producto en el stock";
+        }
+
+
     }
     salidaStock(idProducto, unidades){
         
