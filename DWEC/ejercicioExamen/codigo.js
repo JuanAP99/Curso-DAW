@@ -17,7 +17,7 @@ const darAltaProducto = () =>{
     const nomProd = document.querySelector('[name="txtNombre"]').value;
     const precioProd = Number(document.querySelector('[name="txtPrecio"]').value);
 
-    let tipo = document.querySelector('[name="txtTipo"]:checked').checked;
+    let tipo = document.querySelector("[name=txtTipo]:checked").value;
     let p;
 
     if(tipo === "movil"){
@@ -90,3 +90,7 @@ btnEntrada.addEventListener("click", () =>{
     ocultarFormulario();
     frmEntradaSalidaStock.classList.remove("oculto");
 });
+
+const btnAltaProducto = document.getElementById("btnAltaProducto");
+
+btnAltaProducto.addEventListener("click", darAltaProducto);
