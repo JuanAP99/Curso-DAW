@@ -33,6 +33,8 @@ function altaMedico(){
 function altaCita(){
 
     let c;
+ 
+ /* No va por que me coge el id del primer formulario  */
 
     const idMedico = document.querySelector('[name="txtIdMedico"]').value;
     const paciente = document.querySelector('[name="txtPaciente"]').value;
