@@ -20,7 +20,7 @@ $boton_delete = '<form method="post" action=".?path=artistas/eliminar"><input ty
         <tr>
             <?php 
                 foreach($artistas as $artista):
-                    $boton_update = ' <form method="post" action=".?path=artistas/actualizar/'.$artista['id'].'"><input type="submit" name="actualizar" value="Actualizar"></form><br>';
+                   $boton_update = ' <form method="post" action=".?path=artistas/actualizar/'.$artista['id'].'"><input type="submit" name="actualizar" value="Actualizar"></form><br>';
                    $boton_delete = '<form method="post" action=".?path=artistas/eliminar/'.$artista['id'].'"><input type="submit" name="eliminar" value="Eliminar"></form>';
                    echo ' <td>'.$artista['id'].'</td>';
                    echo ' <td>'.$artista['nombre'].'</td>';

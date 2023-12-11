@@ -69,11 +69,26 @@ class ArtistasController{
     }
 
     public function actualizar($params){
-        $nombre_fichero_vista = '../app/views/formArtistaActualizar.tpl.php';
-        if(file_exists($nombre_fichero_vista)){
-            include($nombre_fichero_vista);
+        require_once('../app/models/artista.php');
+        $nombre_fichero_model = '../app/models/artistas.php';
+        if(file_exists($nombre_fichero_model)){
+            require_once($nombre_fichero_model);
+            $this->modelo = new ArtistasModel();
+            //Sacamos los datos del modelo
+            $artista = $this->modelo->getArtistaByIdToObject($params);
+
+            if(isset($artista) && !empty($artista)){
+                $nombre_fichero_vista = '../app/views/formArtistaActualizar.tpl.php';
+                if(file_exists($nombre_fichero_vista)){
+                    include($nombre_fichero_vista);
+                }
+            }else{
+                var_dump('el artista con id ' . $params[0] . ' no existe');
+            }
+    
         }
-}
+    
+    }
     
 
     public function procesarActualizar(){

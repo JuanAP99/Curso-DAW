@@ -1,5 +1,6 @@
 <?php
 class ArtistasModel{
+    
     private $conexion;
     public function __construct(){
         //Instanciar la conexión que estará disponible en el modelo.
@@ -20,6 +21,18 @@ class ArtistasModel{
         $resultados = $sth->fetchAll(PDO::FETCH_ASSOC);
         
         return $resultados;
+    }
+
+    public function getArtistaByIdToObject($params){
+        require_once ('artista.php');
+        $sql = 'SELECT * FROM cantantes WHERE id = ' . $params[0];
+        $sth = $this->conexion->query($sql);
+        $resultados = $sth->fetchAll(PDO::FETCH_ASSOC);
+        
+        foreach ($resultados as $object):
+            $artista = new Artista($object['id'], $object['nombre'], $object['genero'], $object['fecha_nacimiento'], $object['precio_bolo'], $object['localidad_nacimiento']);
+        endforeach;
+        return $artista;
     }
 
     public function insertArtista($id, $nombre, $genero, $fechaNacimiento, $precioBolo, $lugarNacimiento){
