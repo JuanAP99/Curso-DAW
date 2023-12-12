@@ -1,8 +1,7 @@
 <?php
 include('../app/views/includes/header.tpl.php');
 
-$boton_update = ' <form method="post" action=".?path=artistas/actualizar"><input type="submit" name="actualizar" value="Actualizar"></form><br>';
-$boton_delete = '<form method="post" action=".?path=artistas/eliminar"><input type="submit" name="eliminar" value="Eliminar"></form>';
+
 ?>
 <ul>
     
