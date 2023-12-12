@@ -7,6 +7,7 @@ include('../app/views/includes/header.tpl.php');
     <?php endforeach; ?>
 
 </ul>
+<li><a href=".?path=inicio/home">Volver</a></li>
 <?php
 include('../app/views/includes/footer.tpl.php');
 ?>
