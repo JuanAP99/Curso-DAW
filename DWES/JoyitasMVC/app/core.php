@@ -14,8 +14,8 @@ class Core{
 
         $path_components = explode('/', filter_var($_GET['path'], FILTER_SANITIZE_URL));
 
-        $this->controller = isset($path_components[0])&&!empty($path_components[0])?$path_components[0]:'inicio';
-        $this->method = isset($path_components[1])&&!empty($path_components[1])?$path_components[1]:'home';
+        $this->controller = isset($path_components[0])&&!empty($path_components[0])?$path_components[0]:'conciertos';
+        $this->method = isset($path_components[1])&&!empty($path_components[1])?$path_components[1]:'listar';
         $this->params = array_slice($path_components,2); //TO DO: Gestionar el resto de query strings como elementos adicionales del array de parámetros.
 
 
