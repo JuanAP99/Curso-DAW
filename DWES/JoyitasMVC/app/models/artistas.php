@@ -51,7 +51,7 @@ class ArtistasModel{
         return $filasAfectadas;
     }
 
-    // nuevo metodo para update 
+    // nuevo metodo para update asfasf
 
     // nuevo metodo para delete
 }
