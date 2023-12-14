@@ -50,8 +50,12 @@ class ArtistasModel{
         return $filasAfectadas;
     }
 
+<<<<<<< HEAD
     // nuevo metodo para update 
     public function actualizarArtista($id, $nombre, $genero, $fechaNacimiento, $precioBolo, $localidadNacimiento){
+=======
+    // nuevo metodo para update asfasf
+>>>>>>> 4352fcbe69f0e4552e3e1a391143d4c385e8c5fc
 
         $sql = "UPDATE cantantes SET nombre='$nombre', genero='$genero', fecha_nacimiento='$fechaNacimiento', precio_bolo=$precioBolo, localidad_nacimiento='$localidadNacimiento' WHERE id=$id";
         $stmt = $this->conexion->prepare($sql);
