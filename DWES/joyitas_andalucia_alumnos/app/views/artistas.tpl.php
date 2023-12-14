@@ -1,6 +1,7 @@
 <?php
 include('../app/views/includes/header.tpl.php');
 ?>
+<h1>Listar artistas</h1>
 <ul>
 
     <?php foreach($artistas as $artista): ?>

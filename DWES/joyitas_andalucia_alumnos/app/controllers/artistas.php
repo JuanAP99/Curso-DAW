@@ -30,12 +30,5 @@ class ArtistasController{
             if(file_exists($nombre_fichero_vista)){
                 include($nombre_fichero_vista);
             }
-            
-
-
-
-
-        
-
     }
 }

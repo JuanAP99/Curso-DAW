@@ -17,4 +17,11 @@ class ArtistasModel{
         $resultados= $sth->fetchAll(PDO::FETCH_ASSOC);
         return $resultados;
     }
+    public function borrarArtista($id){
+        $sql = "DELETE FROM cantantes WHERE id=$id";
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->execute();
+        $filasAfectadas = $stmt->rowCount();
+        return $filasAfectadas;
+    }
 }
