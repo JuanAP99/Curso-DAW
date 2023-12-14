@@ -17,11 +17,35 @@ class ArtistasModel{
         $resultados= $sth->fetchAll(PDO::FETCH_ASSOC);
         return $resultados;
     }
+
+    // Funcion de borrado simple cambiar el formulario por si lo quieres probar
     public function borrarArtista($id){
-        $sql = "DELETE FROM cantantes WHERE id=$id";
+        $sql = "DELETE FROM artistas WHERE id=$id";
         $stmt = $this->conexion->prepare($sql);
         $stmt->execute();
         $filasAfectadas = $stmt->rowCount();
         return $filasAfectadas;
+    }
+// funcion con la transaccion hago la anterior por si no va esta intentao
+
+
+    public function borrarArtistaYSusConciertos($id){
+        
+        $sql1 = "DELETE FROM artistas WHERE id = $id";
+        $sql2 = "DELETE * FROM conciertos WHERE id_artista = $id";
+        $stmt = $this->conexion;
+
+      try{
+        $stmt->beginTransaction();
+        $stmt->exec($sql1);
+        $stmt->exec($sql2);
+        $stmt->commit();
+        echo 'Borrado con éxito';
+      }catch(PDOException $e){
+        $stmt->rollback();
+        echo 'Ups, algo salió mal';
+      }
+        
+
     }
 }
