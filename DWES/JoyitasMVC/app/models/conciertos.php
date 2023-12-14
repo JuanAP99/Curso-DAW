@@ -27,7 +27,9 @@ class ConciertoModel{
         require_once('concierto.php');
         $sql = 'SELECT * FROM concierto WHERE id='.$params[0];
         $sth = $this->conexion->query($sql);
+        
     }
+    
     
     
 }

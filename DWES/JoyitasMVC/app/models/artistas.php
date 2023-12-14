@@ -16,10 +16,9 @@ class ArtistasModel{
     }
 
     public function getArtistaById($params){
-        $sql = 'SELECT * FROM cantantes WHERE id = ' . $params[0];
+        $sql = 'SELECT * FROM cantantes WHERE id = '.$params[0];
         $sth = $this->conexion->query($sql);
         $resultados = $sth->fetchAll(PDO::FETCH_ASSOC);
-        
         return $resultados;
     }
 
@@ -52,6 +51,24 @@ class ArtistasModel{
     }
 
     // nuevo metodo para update 
+    public function actualizarArtista($id, $nombre, $genero, $fechaNacimiento, $precioBolo, $localidadNacimiento){
 
+        $sql = "UPDATE cantantes SET nombre='$nombre', genero='$genero', fecha_nacimiento='$fechaNacimiento', precio_bolo=$precioBolo, localidad_nacimiento='$localidadNacimiento' WHERE id=$id";
+        $stmt = $this->conexion->prepare($sql);
+
+        $stmt->execute();
+        $filasAfectadas = $stmt->rowCount();
+        return $filasAfectadas;
+
+
+    }
     // nuevo metodo para delete
+    public function eliminarArtista($id){
+        $sql = "DELETE FROM cantantes WHERE id=$id";
+        $stmt = $this->conexion->prepare($sql);
+
+        $stmt->execute();
+        $filasAfectadas = $stmt->rowCount();
+        return $filasAfectadas;
+    }
 }
