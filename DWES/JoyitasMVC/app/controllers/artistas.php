@@ -75,9 +75,9 @@ class ArtistasController{
             require_once($nombre_fichero_model);
             $this->modelo = new ArtistasModel();
             //Sacamos los datos del modelo
-            $artista = $this->modelo->getArtistaByIdToObject($params);
+            $artistas = $this->modelo->getArtistaById($params);
 
-            if(isset($artista) && !empty($artista)){
+            if(isset($artistas) && !empty($artistas)){
                 $nombre_fichero_vista = '../app/views/formArtistaActualizar.tpl.php';
                 if(file_exists($nombre_fichero_vista)){
                     include($nombre_fichero_vista);
@@ -93,10 +93,38 @@ class ArtistasController{
 
     public function procesarActualizar(){
         // hacer lo mismo que insert, crear un nuevo metodo en el modelo que haga update en base de datos
+        $nombre_fichero_model = '../app/models/artistas.php';
+        if(file_exists($nombre_fichero_model)){
+            require_once($nombre_fichero_model);
+            $this->modelo = new ArtistasModel();
+            //Sacamos los datos del modelo
+            $numRegistros = $this->modelo->actualizarArtista($_POST['id'], $_POST['nombre'], $_POST['genero'], $_POST['fecha_nacimiento'], $_POST['precio_bolo'], $_POST['localidad_nacimiento']);
+    
+           if($numRegistros > 0){
+                var_dump('El registro es correcto');
+           }else{
+            var_dump('El registro no se ha insertado bien :(');
+           }
+           
+        }
+
     }
 
     public function eliminar($params){
-        var_dump('el registro con id ' .$params[0] . 'eliminar');
+        // tengo que cargar el modelo 
+
+        $nombre_fichero_model = '../app/models/artistas.php';
+        if(file_exists($nombre_fichero_model)){
+            include_once($nombre_fichero_model);
+            $this->modelo= new ArtistasModel();
+            $numRegistros = $this->modelo->eliminarArtista($params[0]);
+            
+           if($numRegistros > 0){
+            var_dump('El borrado es correcto');
+       }else{
+        var_dump('El registro no se ha borrado bien :(');
+       }
+        }
     }
 }
 ?>
