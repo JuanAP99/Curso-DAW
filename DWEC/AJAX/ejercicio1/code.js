@@ -16,6 +16,6 @@ function loadXMLDoc(filename, callback) {
         }
       }	
     };
-    xhttp.open("GET", filename, true); //true = asíncrona, //false = síncrona
+    xhttp.open("GET", "mixml.xml", true); //true = asíncrona, //false = síncrona
     xhttp.send();
   }
